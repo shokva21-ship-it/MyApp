@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #05111a;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    background: #0105083e;
+    padding-left: 1.3rem;
+    padding-right: 2rem;
+}
+
+header .header-img {
+    display: flex;
+    align-items: center;
+}
+
+header .header-img img {
+    width: 70px;
+}
+
+header .header-img p {
+    color: white;
+    font-size: 30px;
+    font-weight: 550;
+    position: relative;
+    top: 0.3rem;
+}
+
+header nav {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 0.5%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    width: auto;
+    transition: 1s;
+}
+
+header nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    transition: 1s;
+    position: absolute;
+    background: #0a4069;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    color: #093d65;
+}
+
+header button {
+    background: rgb(79, 251, 251);
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+    width: 130px;
+}
+
+header button::before {
+    content: '';
+    width: 25px;
+    position: absolute;
+    height: 100px;
+    background: rgba(255, 249, 255, 0.388);
+    top: -20px;
+    left: -40px;
+    transform: rotate(15deg);
+    transition: 1s;
+}
+
+header button:hover::before {
+    left: 100%;
+}
+
+#home {
+    width: 100%;
+    height: 550px;
+    margin: 40px 0;
+    padding-left: 4rem;
+    padding-right: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home h4 {
+    font-size: 30px;
+    color: aqua;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+#home h1 {
+    font-size: 85px;
+    color: white;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+#home h1 span {
+    color: aqua;
+}
+
+#home h2 {
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#home .button-home-div {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+#home .button-home-div button {
+    padding: 10px 15px;
+    color: black;
+    font-size: 25px;
+    border: none;
+    border-radius: 50px;
+    background: rgb(38, 229, 229);
+    font-weight: 600;
+}
+
+#watch-video {
+    background: transparent;
+    color: white;
+}
+
+.tek-div {
+    width: auto;
+    gap: 50px;
+    display: flex;
+}
+
+.tek-div .small-divs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 270px;
+    margin-top: 2%;
+}
+
+.text-div {
+    display: grid;
+}
+
+.tek-div .small-divs .text-div p {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.tek-div .small-divs i {
+    font-size: 50px;
+    color: aqua;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #072f4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tek-div .small-divs .text-div h5 {
+    font-size: 15px;
+    color: white;
+    font-weight: 100;
+}
+
+#home img {
+    width: 600px;
+}
+
+#key {
+    width: 100%;
+    display: grid;
+    height: 500px;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+#key>p {
+    font-size: 30px;
+    color: aqua;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+#key>h2 {
+    font-size: 85px;
+    color: white;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+#key>h5 {
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.div-icon {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-between;
+    height: auto;
+}
+
+.div-icon .icon-divs {
+    width: 250px;
+    height: 250px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background: #031d30;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 2%;
+    position: relative;
+    z-index: 10;
+    border: none;
+    transition: 0.2s;
+}
+
+.div-icon .icon-divs:hover {
+    border-right: 10px solid black;
+    border-bottom: 5px solid black;
+}
+
+.div-icon .icon-divs i {
+    font-size: 60px;
+    color: aqua;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: #072f4e29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid #072f4e;
+}
+
+.div-icon .icon-divs p {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+}
+
+.div-icon .icon-divs h4 {
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+}
+
+#features {
+    width: 100%;
+    height: 700px;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#features .fea-div {
+    height: 100%;
+    width: 50%;
+    display: grid;
+    justify-content: left;
+}
+
+#features .fea-div>p {
+    font-size: 30px;
+    color: aqua;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+#features .fea-div>h3 {
+    font-size: 85px;
+    color: white;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+#features .fea-div>h5 {
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#features .fea-div .small-div-all {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#features .fea-div .small-div-all .sll-divs {
+    width: 140px;
+    height: 120px;
+    background: #77b9e8;
+    border-radius: 20px;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.sll-divs i {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+
+.sll-divs p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#features button {
+    background: rgb(79, 251, 251);
+    border-radius: 50px;
+    border: none;
+    font-size: 30px;
+    font-weight: 550;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    width: 200px;
+}
+footer {
+    width: 100%;
+    background: #031019;
+    color: white;
+    padding: 70px 70px 25px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.footer-top {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    padding-bottom: 55px;
+}
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    color: #aebbc2;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.footer-links a {
+    color: #aebbc2;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #19eeee;
+    transform: translateX(4px);
+}
+
+.footer-links i {
+    width: 20px;
+    color: #19eeee;
+}
+
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #7f9099;
+    font-size: 14px;
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-bottom a {
+    color: #7f9099;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #19eeee;
+}
